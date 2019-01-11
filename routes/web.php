@@ -11,6 +11,22 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::get('/', 'PageController@home');
+Route::get('about', 'PageController@about');
+Route::get('category', 'PageController@category');
+Route::get('contact', 'PageController@contact');
+Route::get('cart', 'PageController@cart');
+Route::get('checkout', 'PageController@checkout');
+
+
+
+
+
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
